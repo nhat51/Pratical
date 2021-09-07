@@ -8,9 +8,9 @@ namespace Pratical.Models
 {
     public partial class PraticalContext : DbContext
     {
-        public PraticalContext()
+       /* public PraticalContext()
         {
-        }
+        }*/
 
         public PraticalContext(DbContextOptions<PraticalContext> options)
             : base(options)
@@ -19,7 +19,7 @@ namespace Pratical.Models
 
         public virtual DbSet<Employee> Employees { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+       /* protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
@@ -27,7 +27,7 @@ namespace Pratical.Models
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-M7UHRSN\\SQLEXPRESS;Initial Catalog=Pratical;Integrated Security=True\n");
             }
         }
-
+*/
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
